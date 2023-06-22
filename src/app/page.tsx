@@ -1,7 +1,12 @@
-import Image from 'next/image'
+import Profile from "@/components/Profile";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <h1>블로그 메인</h1>
-  )
+    <>
+      <div className="flex justify-center">
+        <Profile />
+      </div>
+    </>
+  );
 }
