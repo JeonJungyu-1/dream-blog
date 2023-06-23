@@ -1,6 +1,7 @@
 import Link from "next/link";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import Profile from "@/components/Profile";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,9 +11,9 @@ export const metadata = {
 };
 
 const navData = [
-  { href: "/a", subject: "home" },
-  { href: "/a", subject: "about" },
-  { href: "/a", subject: "post" },
+  { href: "/", subject: "home" },
+  { href: "/about", subject: "about" },
+  { href: "/p", subject: "post" },
   { href: "/a", subject: "contact" },
 ];
 
@@ -35,6 +36,9 @@ export default function RootLayout({
             ))}
           </nav>
         </header>
+        <div className="flex justify-center">
+          <Profile />
+        </div>
         {children}
       </body>
     </html>
