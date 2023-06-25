@@ -1,3 +1,5 @@
+import Profile from "@/components/Profile";
+
 interface aboutType {
   type: string;
   detail: string[];
@@ -27,19 +29,24 @@ const aboutData: aboutType[] = [
 
 export default function AboutPage() {
   return (
-    <div className="flex justify-center my-8">
-      <div className="text-center bg-gray-700 w-4/5 py-3">
-        {aboutData.map((el, index) => (
-          <>
-            <div key={index} className="text-2xl font-bold">
-              {el.type}
-            </div>
-            {el.detail.map((elem, index) => (
-              <div key={index}>{elem}</div>
-            ))}
-          </>
-        ))}
+    <>
+      <div className="flex justify-center">
+        <Profile />
       </div>
-    </div>
+      <div className="flex justify-center my-8">
+        <div className="text-center bg-gray-700 w-4/5 py-3">
+          {aboutData.map((el, index) => (
+            <>
+              <div key={index} className="text-2xl font-bold">
+                {el.type}
+              </div>
+              {el.detail.map((elem, index) => (
+                <div key={index}>{elem}</div>
+              ))}
+            </>
+          ))}
+        </div>
+      </div>
+    </>
   );
 }
