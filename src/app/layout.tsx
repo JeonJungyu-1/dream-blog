@@ -13,8 +13,8 @@ export const metadata = {
 const navData = [
   { href: "/", subject: "home" },
   { href: "/about", subject: "about" },
-  { href: "/p", subject: "post" },
-  { href: "/a", subject: "contact" },
+  { href: "/posts", subject: "posts" },
+  { href: "/contact", subject: "contact" },
 ];
 
 export default function RootLayout({
@@ -36,9 +36,6 @@ export default function RootLayout({
             ))}
           </nav>
         </header>
-        <div className="flex justify-center">
-          <Profile />
-        </div>
         {children}
       </body>
     </html>
